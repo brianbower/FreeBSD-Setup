@@ -1,6 +1,9 @@
 #!/bin/sh
 echo "Change root password..."
 passwd
+echo "Apply Security Patches..."
+freebsd-update fetch
+freebsd-update install
 echo "Fetch and extract ports..."
 portsnap fetch
 portsnap extract
